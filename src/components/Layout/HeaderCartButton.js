@@ -1,12 +1,14 @@
-const HeadercartButton = () => {
+import CartIcon from "../Cart/CartIcon";
+
+const HeaderCartButton = () => {
   return (
     <button>
       <span>
-        <cartIcon />
+        <CartIcon />
       </span>
       <span>Your Cart</span>
       <span>3</span>
     </button>
   );
 };
-export default HeadercartButton;
+export default HeaderCartButton;
