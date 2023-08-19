@@ -1,22 +1,19 @@
-import React, { useContext } from "react";
-
-import cartContext from "./cart-context";
-
-const AddItemToCartHandler = (item) => {};
-const RemoveItemFromCartandler = (id) => {};
-
+import CartContext from "./cart-context";
 const CartProvider = (props) => {
+  const addItemToCartHandler = (item) => {};
+  const removeItemFromCartHandler = (id) => {};
+
   const cartContext = {
     items: [],
     totalAmount: 0,
-    addItem: AddItemToCartHandler,
-    removeItem: RemoveItemFromCartandler,
+    addItem: addItemToCartHandler,
+    removeItem: removeItemFromCartHandler,
   };
 
   return (
-    <cartContext.Provider value={cartContext}>
+    <CartContext.Provider value={cartContext}>
       {props.children}
-    </cartContext.Provider>
+    </CartContext.Provider>
   );
 };
 
